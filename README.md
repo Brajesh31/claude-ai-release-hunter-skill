@@ -103,3 +103,6 @@ The monitored source list and repository names in SKILL.md are a starting config
 ## Source and attribution
 
 The upstream SKILL.md metadata identifies Daniel Avila as its author and declares MIT as its license. That attribution is intentionally preserved. The single root [LICENSE](LICENSE) remains the repository-level MIT license.
+
+
+The repository includes a root .gitignore rule for .release-hunter/ so runtime state, snapshots, generated email bodies, and run logs are kept out of version control. See [.gitignore](.gitignore).
