@@ -1,0 +1,12 @@
+{
+  "anthropics/claude-code": {
+    "last_release_tag": null,
+    "last_reviewed_commit_sha": null
+  },
+  "openai/codex": {
+    "last_release_tag": null,
+    "last_reviewed_commit_sha": null
+  },
+  "claude_dev_posts": [],
+  "hn_story_ids": []
+}
