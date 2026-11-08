@@ -1,40 +1,88 @@
-# Ai Release Hunter
+# claude-ai-release-hunter-skill
+
+A Claude Code skill for collecting, deduplicating, and delivering a recurring digest of significant AI product and developer-tool releases.
 
 ## Overview
 
-This repository provides a dedicated Claude skill for ai release hunter. It combines domain-specific guidance with a repeatable process for completing related tasks.
+This skill organizes a release-monitoring workflow that scans configured public release channels, identifies meaningful changes, removes duplicates, and prepares a digest for delivery.
 
-## What It Provides
+It is designed for scheduled use, such as a daily run, and keeps local state so previously reported items are not repeatedly included.
 
-- A clear definition of the skill's purpose and scope.
-- Practical instructions, concepts, and recommended workflows.
-- Guidance for turning task context into structured outputs.
-- Supporting files included in the skill package.
+## Main Capabilities
 
-## Repository Structure
+- Monitor configured AI product and developer-tool release sources.
+- Review repository changes and product updates.
+- Collect relevant release announcements and technical changes.
+- Deduplicate previously reported items.
+- Store run state and snapshots.
+- Generate a structured digest.
+- Prepare email content for a configured delivery command.
+- Keep run logs for troubleshooting.
 
-```text
-SKILL.md
+## Configuration
+
+The skill uses environment and directory settings for delivery and local state. Review the configuration table in `SKILL.md` before the first run.
+
+Typical configuration includes:
+
+- Recipient email address.
+- Email delivery command.
+- State directory.
+- Snapshot directory.
+- Output directory.
+- Digest language.
+- Email subject.
+
+Do not store email credentials or API tokens in the repository. Use environment variables or a secure secret manager.
+
+## Installation
+
+```bash
+git clone https://github.com/Brajesh31/claude-ai-release-hunter-skill.git ~/.claude/skills/ai-release-hunter
 ```
 
-## Requirements
+## Usage
 
-- A Claude-compatible environment that supports skills.
-- Clear task objectives and relevant context.
-- Human review of recommendations and generated outputs.
+Invoke the skill when requesting a release digest or configuring a scheduled monitoring workflow:
 
-## Getting Started
+```text
+/ai-release-hunter
+```
 
-1. Review `SKILL.md` and understand the expected inputs and outputs.
-2. Add the skill to the skills directory supported by your Claude environment.
-3. Start a task that falls within the skill's stated scope.
-4. Provide constraints, success criteria, and useful background.
-5. Check the result for accuracy and fit before using it.
+Specify the sources to monitor, digest cadence, delivery method, language, and relevance criteria.
 
-## Usage Guidance
+## Typical Workflow
 
-Keep the task focused and provide concrete context. Treat outputs as working material that should be validated against current product, technical, or business requirements.
+1. Load configuration and credentials securely.
+2. Read the previous deduplication state.
+3. Collect updates from configured sources.
+4. Normalize and classify candidate items.
+5. Remove duplicates and previously reported changes.
+6. Filter for meaningful releases.
+7. Generate the digest.
+8. Deliver it through the configured email command.
+9. Save updated state and logs.
+10. Review failures and incomplete source checks.
 
-## License
+## Reliability and Operations
 
-MIT. See [LICENSE](LICENSE).
+- Use bounded request timeouts.
+- Handle unavailable sources independently.
+- Avoid sending duplicate digests after partial failures.
+- Preserve state between scheduled runs.
+- Keep snapshots and logs for diagnosis.
+- Validate the recipient and delivery command before enabling automation.
+- Report which sources failed or were skipped.
+
+## Repository Contents
+
+- `SKILL.md`: Main release monitoring workflow and configuration.
+- `README.md`: Setup, scheduled use, and operational guidance.
+
+## Scheduling
+
+The workflow can be run by a scheduler such as cron or another automation system. Choose a cadence that matches the value of the updates and ensure that the execution environment has the required network access, credentials, and delivery command.
+
+## Important Note
+
+This skill summarizes configured release sources. It does not guarantee that every relevant AI release will be detected. Review source coverage and failed checks before treating a digest as comprehensive.
