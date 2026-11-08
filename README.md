@@ -86,3 +86,20 @@ The workflow can be run by a scheduler such as cron or another automation system
 ## Important Note
 
 This skill summarizes configured release sources. It does not guarantee that every relevant AI release will be detected. Review source coverage and failed checks before treating a digest as comprehensive.
+
+
+## Supporting Resources
+
+| File | Purpose |
+|---|---|
+| [Source coverage register](resources/source-coverage-register.csv) | Track configured source groups, check methods, coverage, and failures. |
+| [Digest quality checklist](resources/digest-quality-checklist.md) | Validate coverage, relevance, source links, email safety, and state updates. |
+| [Seen-state example](resources/seen-state-example.json) | Show the basic shape of deduplication state without credentials or real user data. |
+
+## Important operating notes
+
+The monitored source list and repository names in SKILL.md are a starting configuration, not a guarantee of complete coverage. Confirm source availability, date windows, API limits, and relevant changes on each run. The workflow can make many GitHub API calls, so handle rate limits and partial source failures explicitly. Do not advance deduplication state until delivery succeeds, otherwise an item may be silently lost on retry.
+
+## Source and attribution
+
+The upstream SKILL.md metadata identifies Daniel Avila as its author and declares MIT as its license. That attribution is intentionally preserved. The single root [LICENSE](LICENSE) remains the repository-level MIT license.
