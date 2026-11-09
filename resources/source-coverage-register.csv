@@ -1,9 +1,0 @@
-Source,Source type,Canonical URL or repository,Check method,Relevance focus,Importance,Last successful check (UTC),Status,Failure notes
-Anthropic GitHub,GitHub organization,https://github.com/anthropics,GitHub REST API,Claude Code SDKs agents and developer tooling,High,,,Not checked,
-Meta AI GitHub,GitHub organizations,https://github.com/meta-llama; https://github.com/facebookresearch,GitHub REST API,Models agents vision audio and multimodal,High,,,Not checked,
-Vercel Labs,GitHub organization and Labs page,https://github.com/vercel-labs; https://vercel.com/labs,GitHub REST API and page snapshot,Agent tooling and developer experiments,High,,,Not checked,
-OpenAI GitHub,GitHub organization,https://github.com/openai,GitHub REST API,Codex agents SDKs MCP and guardrails,High,,,Not checked,
-Google AI GitHub,GitHub organization,https://github.com/google,GitHub REST API,Agent frameworks Gemini SDKs and A2A,High,,,Not checked,
-Claude Cowork changelog,Changelog,https://claude.com/docs/cowork/changelog,Page snapshot,Product behavior and developer workflow changes,High,,,Not checked,
-claude.dev blog,Technical blog,https://claude.dev/,WebFetch,Engineering guidance and Claude developer tooling,Medium,,,Not checked,
-Hacker News,Community stories,https://news.ycombinator.com,Algolia HN API,High-signal launches and technical discussion,Medium,,,Not checked,

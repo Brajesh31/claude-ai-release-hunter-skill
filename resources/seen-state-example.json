@@ -1,12 +1,19 @@
 {
-  "anthropics/claude-code": {
-    "last_release_tag": null,
-    "last_reviewed_commit_sha": null
+  "repositories": {
+    "anthropics/claude-code": {
+      "last_release_id": null,
+      "last_release_tag": null,
+      "last_reviewed_commit_sha": null
+    },
+    "openai/codex": {
+      "last_release_id": null,
+      "last_release_tag": null,
+      "last_reviewed_commit_sha": null
+    }
   },
-  "openai/codex": {
-    "last_release_tag": null,
-    "last_reviewed_commit_sha": null
-  },
-  "claude_dev_posts": [],
-  "hn_story_ids": []
+  "page_entries": {},
+  "page_snapshots": {},
+  "community_item_ids": [],
+  "last_successful_run": null,
+  "last_successful_window_end": null
 }

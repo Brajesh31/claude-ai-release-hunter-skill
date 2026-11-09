@@ -1,34 +1,39 @@
 # AI Release Digest Quality Checklist
 
-Use this checklist before saving state or sending an email digest.
+Complete this review before delivering a briefing or saving the new deduplication state.
 
 ## Coverage and time window
-- [ ] The reporting window and timezone are explicit.
-- [ ] Each configured source was checked or marked failed/skipped.
-- [ ] GitHub organization/repository scans distinguish releases from commits.
-- [ ] Current changelog/page snapshots were compared with prior snapshots.
-- [ ] Hacker News results satisfy the configured date, points, and relevance filters.
-- [ ] The digest states when any source could not be checked.
+
+- [ ] Reporting window and time zone are explicit.
+- [ ] Each configured platform was checked or marked incomplete.
+- [ ] Repository releases are distinguished from ordinary commits.
+- [ ] Product-page changes were compared with the previous saved snapshot.
+- [ ] Community discussions meet the configured date and relevance filters.
+- [ ] The briefing clearly identifies checks that did not complete.
 
 ## Accuracy and relevance
-- [ ] Every item links to its primary release, commit, changelog entry, or discussion.
-- [ ] Dates are taken from the source, not inferred.
-- [ ] The change is meaningful to the configured audience.
-- [ ] Duplicate announcements and already-reported items are removed.
-- [ ] A release is not described as shipped when the source only announces a preview or roadmap.
-- [ ] Google items are described without adding a Claude/Anthropic comparison angle.
+
+- [ ] Every item has a working link.
+- [ ] Dates match the publication or commit record.
+- [ ] Shipped capabilities are distinguished from previews and roadmap items.
+- [ ] Each item is relevant to the configured audience.
+- [ ] Repeated coverage has been removed.
+- [ ] Routine maintenance is excluded unless it has meaningful impact.
 - [ ] No unsupported claims or invented impact estimates appear.
 
-## Email safety
-- [ ] Recipient matches RECIPIENT_EMAIL.
-- [ ] Subject and language match configuration.
-- [ ] The output body is saved to the durable output directory.
-- [ ] The delivery command is approved and does not expose credentials.
-- [ ] A dry run is reviewed before the first scheduled send.
+## Delivery safety
+
+- [ ] Recipient matches the approved configuration.
+- [ ] Subject and language match the requested settings.
+- [ ] The final message is saved in the durable output directory.
+- [ ] The delivery mechanism is configured and approved.
+- [ ] A first scheduled message was reviewed before recurring delivery.
 
 ## State integrity
-- [ ] State is read before filtering previously seen items.
-- [ ] New IDs/tags/SHAs are written only after successful delivery.
-- [ ] A failed send leaves items eligible for retry.
-- [ ] Run summary records checked sources, reported items, and failures.
-- [ ] State and snapshots contain no credentials or message secrets.
+
+- [ ] Previous state was loaded before filtering.
+- [ ] Release IDs, commit SHAs, and discussion IDs are stable.
+- [ ] New state is written only after successful delivery.
+- [ ] A failed send leaves the same items available for retry.
+- [ ] Run summary records completed checks and failures.
+- [ ] State files contain no credentials or message secrets.

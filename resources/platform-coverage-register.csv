@@ -1,0 +1,9 @@
+Platform,Channel type,Organization or page,Check method,Relevance focus,Priority,Last successful check UTC,Status,Failure notes
+Anthropic,GitHub organization,https://github.com/anthropics,Repository releases and commits,Claude models SDKs agents and developer tools,High,,Not checked,
+Meta AI,GitHub organizations,https://github.com/meta-llama; https://github.com/facebookresearch,Repository releases and commits,Models agent systems vision audio and multimodal development,High,,Not checked,
+Vercel Labs,GitHub organization and product page,https://github.com/vercel-labs; https://vercel.com/labs,Repository releases and page comparison,Agent tooling and developer experiments,High,,Not checked,
+OpenAI,GitHub organization,https://github.com/openai,Repository releases and commits,Codex agents SDKs guardrails and developer tooling,High,,Not checked,
+Google AI,GitHub organization,https://github.com/google,Repository releases and commits,Agent frameworks Gemini SDKs and model development,High,,Not checked,
+Claude Cowork,Product changelog,https://claude.com/docs/cowork/changelog,Page comparison,Product behavior and workflow changes,High,,Not checked,
+Claude developer updates,Technical updates,https://claude.dev/,Page comparison,Engineering guidance and developer tooling,Medium,,Not checked,
+Hacker News,Technical community,https://news.ycombinator.com,Community search,High-signal launches and technical discussion,Medium,,Not checked,
